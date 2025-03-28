@@ -1,18 +1,12 @@
-/* @type {import('next').NextConfig} 
-const nextConfig = {
-    reactStrictMode: true,
-    images: {
-      domains: ['your-image-hosting.com'], // Add your image domain if needed
-    },
-  }
-  
-  module.exports = nextConfig;
-  */
-  /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-      allowedDevOrigins: ['http://localhost:3000', 'http://192.168.68.101:3000']
-    }
+      turbo: {
+        // Add any Turbopack-specific configurations if needed
+      }
+    },
+    // Add allowed dev origins to resolve the cross-origin warning
+    allowedDevOrigins: ['http://localhost:3000', 'http://192.168.68.101:3000']
   };
   
   module.exports = nextConfig;
